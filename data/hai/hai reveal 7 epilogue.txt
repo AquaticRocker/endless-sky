@@ -35,8 +35,8 @@ mission "Hai Reveal [D01A] Summoned to Mountaintop"
 	destination "Mountaintop"
 	to offer
 		not "Hai Reveal [D01B] Summoned to Mountaintop: offered"
-		#This makes sure that the background missions for the danger of traveling to Hai space can still happen (as they definitely don't work after this section).
-		#This also means that a lot of great content doesn't get excluded for players who don't find the Hai before finishing the main plot just because new content has been added.
+		# This makes sure that the background missions for the danger of traveling to Hai space can still happen (as they definitely don't work after this section).
+		# This also means that a lot of great content doesn't get excluded for players who don't find the Hai before finishing the main plot just because new content has been added.
 		has "event: hai-human treaty prepared"
 		has "Nanachi 4: done"
 		# Nanachi is too long a chain to do in the middle of the main story, the starting conditions have been changed to be available as soon as you're famous and not busy.
@@ -47,7 +47,7 @@ mission "Hai Reveal [D01A] Summoned to Mountaintop"
 	on offer
 		event "cardax site chosen"
 		conversation
-			#A message summons you for the treaty resolution.
+			# A message summons you for the treaty resolution.
 			`When you land at the spaceport, you find a message waiting for you from Teneep in the system buffer.`
 			`	The message has traveled a very long way and filtered through a great many relays to reach you, but it is nice that you can safely send messages across the wormhole now.`
 			`	The content of the message is very simple. The Hai-human treaty, which both peoples' governments resolved to work on, has reached its final stages of drafting and acceptance. Apparently there's something they want you to assist with to get it over the line. They'll be waiting for you on <destination> when you're ready.`
@@ -63,8 +63,8 @@ mission "Hai Reveal [D01B] Summoned to Mountaintop"
 	destination "Mountaintop"
 	to offer
 		not "Hai Reveal [D01A] Summoned to Mountaintop: offered"
-		#This makes sure that the background missions for the danger of traveling to Hai space can still happen (as they definitely don't work after this section).
-		#This also means that a lot of great content doesn't get excluded for players who don't find the Hai before finishing the main plot just because new content has been added.
+		# This makes sure that the background missions for the danger of traveling to Hai space can still happen (as they definitely don't work after this section).
+		# This also means that a lot of great content doesn't get excluded for players who don't find the Hai before finishing the main plot just because new content has been added.
 		has "event: hai-human treaty prepared"
 		has "Nanachi 4: done"
 		# Nanachi is too long a chain to do in the middle of the main story, the starting conditions have been changed to be available as soon as you're famous and not busy.
@@ -75,12 +75,12 @@ mission "Hai Reveal [D01B] Summoned to Mountaintop"
 	on offer
 		event "cardax site chosen"
 		conversation
-			#A message summons you for the treaty resolution.
+			# A message summons you for the treaty resolution.
 			`When you land at the spaceport, you find a message waiting for you from Teneep in the system buffer.`
 			`	The content of the message is very simple. The Hai-human treaty, which both peoples' governments resolved to work on, has reached its final stages of drafting and acceptance. Apparently there's something they want you to assist with to get it over the line. They'll be waiting for you on <destination> when you're ready.`
 				accept
 	
-#Redefine Cardax to have a named location for the station.
+# Redefine Cardax to have a named location for the station.
 event "cardax site chosen"
 	system Cardax
 		add object
@@ -142,7 +142,7 @@ mission "Hai Reveal [D02] Escort to Cardax"
 			`	Xilin shrugs. "We've heard a rumor that the pirates might have caught wind of what we're doing. The reality is that the marauders up here can field a truly formidable force, if they get their act together. They've overrun the Navy outpost on Farpoint a number of times before, and it would be devastating if an entire naval flotilla, the Hai construction fleet, and a whole security force were all caught out in the open by such a fleet, possibly attacked from both sides.`
 			`	"By separating them, we're less likely to tip them off as to when exactly we choose to act, and once the station is up, the fleet can use the station's projector and facilities to support their presence. Plus, if they are tipped off already and we can't deal with them, then we only lose the one Geocoris. We expect that you and the Hai security ships are capable enough to escape from trouble if it's more than you can handle."`
 			choice
-				` 	"Makes sense."`
+				`	"Makes sense."`
 				`	"I suppose..."`
 			`	"The Geocoris and security force are ready whenever you are. Be safe out there <last>, and remember: we can't have any pirates observing the construction."`
 				accept
@@ -199,7 +199,8 @@ mission "Hai Reveal [D03] Defend Mooncreek Construction Site"
 		personality heroic escort
 		fleet
 			names "republic capital"
-			fighters "republic fighter"
+			fighters
+				names "republic fighter"
 			variant
 				"Carrier (Mark II)" 3
 				"Lance" 12
@@ -217,7 +218,7 @@ mission "Hai Reveal [D03] Defend Mooncreek Construction Site"
 		ship Geocoris "Luf Sook Hey"
 		ship Geocoris "Du Eh"
 		ship Geocoris "Mon e Ow"
-	npc 
+	npc
 		government "Pirate"
 		system Alcyone
 		personality heroic unconstrained waiting nemesis
@@ -272,7 +273,7 @@ mission "Hai Reveal [D04] Escort Republic Outfitters"
 			`	"Still," says Hiyamaharu, turning to Xilin.`
 			label fantastic
 			`	"A great success all round," replies Xilin. "The Republic and Hai governments have approved a reward of <payment> by the way, as thanks for your considerable assistance here.`
-			`	"If you have a moment though, we'd appreciate your continued help with a bit of PR now. To finalize the new station, the plan is to facilitate the set up of some of the major outfitters, both from Hai space and from ours. Predominantly, this would be so that we can ensure a ready supply of munitions on the station at all times. As well, a long-term garrison to act as security needs to be established. We'd like you to escort each of them on the last leg of their journeys, mostly for the photo ops.`
+			`	"If you have a moment though, we'd appreciate your continued help with a bit of PR now. To finalize the new station, the plan is to facilitate the setup of some of the major outfitters, both from Hai space and from ours. Predominantly, this would be so that we can ensure a ready supply of munitions on the station at all times. As well, a long-term garrison to act as security needs to be established. We'd like you to escort each of them on the last leg of their journeys, mostly for the photo ops.`
 			`	"Of course," Xilin adds, "we'll understand if you're too busy now."`
 			choice
 				`	"Sure, why not?"`
@@ -333,7 +334,8 @@ mission "Hai Reveal [D05] Escort Republic Outfitters"
 		government Republic
 		fleet
 			names "republic capital"
-			fighters "republic fighter"
+			fighters
+				names "republic fighter"
 			variant
 				"Carrier"
 				"Lance" 4
@@ -463,8 +465,8 @@ mission "Hai Reveal [D09] Escort Hai Outfitters"
 		ship Geocoris "Mon Yo Sen"
 		
 		
-#The Free Worlds demand a tour so they can be seen to be contributing to the wider benefit of humanity. (They're PR hogs.)
-#This will need branches in the event of future alternative campaigns.
+# The Free Worlds demand a tour so they can be seen to be contributing to the wider benefit of humanity. (They're PR hogs.)
+# This will need branches in the event of future alternative campaigns.
 mission "Hai Reveal [D10] Escort Free World Outfitters"
 	landing
 	name "<origin> Construction"
@@ -488,14 +490,14 @@ mission "Hai Reveal [D10] Escort Free World Outfitters"
 			`	You look at your friend, and you can tell he's waiting for you to accept his premise first, holding something back...`
 			choice
 				`	"What's the catch?"`
-			`	He chuckles. "You're getting to know me too well."`
-			`	"The catch is that the Free Worlds will only sponsor the outfitters if you agree to escort their convoys directly from Solace and Rust the entire way here. They want to make a big show of it - or rather, a certain senator has goaded them into making a show of it.'`
+			`	He chuckles. "You're getting to know me too well.`
+			`	"The catch is that the Free Worlds will only sponsor the outfitters if you agree to escort their convoys directly from Solace and Rust the entire way here. They want to make a big show of it - or rather, a certain senator has goaded them into making a show of it."`
 			`	He sighs. "On the plus side though, if you're interested, you do get paid diplomatic escort rates."`
 			choice
 				`	"I'll do it, friend."`
 					accept
 				`	"Of course I'll do it, but how much is that exactly?"`
-			`	He winks. "A hundred thousand credits per day, for a fifty-two day route with eight stops."`
+			`	He winks. "A hundred thousand credits per day, for a fifty-two-day route with eight stops."`
 			`	"Of course, if you really don't want to do it, I'll understand. I don't imagine you're keen to deal with the politics."`
 			`	You take a moment to consider helping a good friend... for six million credits.`
 			choice
@@ -558,25 +560,25 @@ mission "Hai Reveal [D12] Escort Free World Outfitters"
 		ship "Hauler III" "F.S. Ponderosa"
 		ship "Hauler III" "F.S. Bartlett"
 		ship "Hauler III" "F.S. Sycamore"
-	npc 
+	npc
 		government "Pirate"
 		system Shaula
 		personality heroic unconstrained waiting nemesis
 		fleet "Marauder fleet X"
 		fleet "Marauder fleet IX" 2
-	npc 
+	npc
 		government "Pirate"
 		system Gienah
 		personality heroic unconstrained waiting nemesis
 		fleet "Marauder fleet X"
 		fleet "Marauder fleet IX" 2
-	npc 
+	npc
 		government "Pirate"
 		system Alcyone
 		personality heroic unconstrained waiting nemesis
 		fleet "Marauder fleet X"
 		fleet "Marauder fleet IX" 2
-	npc 
+	npc
 		government "Pirate"
 		system Almaaz
 		personality heroic unconstrained waiting nemesis
@@ -591,13 +593,13 @@ event "mooncreek main outfitters"
 		add outfitter "Hai Security"
 		security 0.8
 
-#Kraz & Delta V
+# Kraz & Delta V
 event "mooncreek fw outfitters"
 	planet Mooncreek
 		add outfitter "FW Security"
 
 
-#add syndicate hai and republic outfitters event - do not add FW outfitter event - proceed to trigger story conclusion.
+# add syndicate hai and republic outfitters event - do not add FW outfitter event - proceed to trigger story conclusion.
 mission "Hai Reveal [D0XA] Skipped Mooncreek Escorts"
 	landing
 	invisible
@@ -613,7 +615,7 @@ mission "Hai Reveal [D0XB] Skipped Mooncreek Escorts"
 	description "Travel to Mountaintop for the final treaty signing."
 	destination "Mountaintop"
 	to offer
-		has "mooncreek main outfitters" 
+		has "mooncreek main outfitters"
 		not "Hai Reveal [D04] Escort Republic Outfitters: done"
 	on offer
 		conversation
@@ -626,7 +628,7 @@ mission "Hai Reveal [D0XC] Skipped Mooncreek Escorts"
 	description "Travel to Mountaintop for the final treaty signing."
 	destination "Mountaintop"
 	to offer
-		has "mooncreek main outfitters" 
+		has "mooncreek main outfitters"
 		has "Hai Reveal [D10] Escort Free World Outfitters: declined"
 	on offer
 		conversation
@@ -667,13 +669,13 @@ mission "Hai Reveal [D14] Hai-Human Treaty"
 		payment 12000000
 		conversation
 			`Arriving on <origin> once again brings with it full diplomatic regalia. The gallery "Where Mountains Touch The Sky" is filled to the brim with a great many representatives from the Core and Paradise worlds, and some of the more notable representatives from the Syndicate and Free Worlds. The entire Hai Elder Council is in attendance, and the Chancellor of the Free Worlds and President of the Republic are again schmoozing about in their most respectable suits. Alondo, Xilin, and Hiyamaharu have their symbols of office, and it looks like the Free Worlds have now finalized their design for Alondo's.`
-			`	The speeches in the grand Borealis Chamber turn out to be rather long and dry. Teeneep makes an appearance along with one of the other Elder Hai, whom you think you recognize as the one who asked you strange questions once before. Only the Republic President makes a head of state address, but the highest officer of the Navy also makes an address on the value of the Mooncreek station to the security of both nations and and the benefits of long-term cooperation with mutual friends.`
+			`	The speeches in the grand Borealis Chamber turn out to be rather long and dry. Teeneep makes an appearance along with one of the other Elder Hai, whom you think you recognize as the one who asked you strange questions once before. Only the Republic President makes a head of state address, but the highest officer of the Navy also makes an address on the value of the Mooncreek station to the security of both nations and the benefits of long-term cooperation with mutual friends.`
 			`	You are asked to stand for a great many photos, make occasional comments, and shake an absolutely endless series of hands. Xilin is kind enough to make sure you get some of the better hors d'oeuvres in between exchanging pleasantries.`
 			`	When it's over, Xilin and Hiyamaharu quietly inform you that you have a reward of <payment> for your earlier efforts setting up Mooncreek. You're free to go back about your business now.`
 				decline
 
 
-#The final conclusion event.
+# The final conclusion event.
 event "hai-human treaty signed"
 
 
